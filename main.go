@@ -12,7 +12,9 @@ import (
 func main() {
 	http.HandleFunc("/cut-video", cutVideoHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
+	fmt.Println("hello world") 
 }
+
 
 func cutVideoHandler(w http.ResponseWriter, r *http.Request) {
 	// 解析请求参数
